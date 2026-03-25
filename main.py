@@ -28,7 +28,7 @@ def list_tasks():
     return list(tasks.values())
 
 @app.post("/tasks", response_model=Task, status_code=201)
-def crate_task(payload: TaskCreate):
+def create_task(payload: TaskCreate):
     global next_id
     
     task = Task(id=next_id, **payload.model_dump())
