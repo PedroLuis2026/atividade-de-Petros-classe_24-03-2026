@@ -9,7 +9,7 @@ class TaskCreate(BaseModel):
     done: bool = False
 
 class TaskUpdate(BaseModel):
-    title: set | None = None
+    title: str | None = None
     description: str | None = None
     done: bool | None = None
 
